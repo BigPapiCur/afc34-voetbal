@@ -193,5 +193,30 @@
     },
     "doelpunten": {},
     "gepubliceerd": false
+  },
+  {
+    "id": 1780742951876,
+    "datum": "2026-06-07",
+    "tegenstander": "V.v. de Wherevogels JO10-1",
+    "soort": "toernooi",
+    "tijdstip": "11:00",
+    "aanwezig": [
+      "Nick",
+      "Noah",
+      "Kick",
+      "Nyjah",
+      "Axel",
+      "Benjamin",
+      "Julian",
+      "Lorenzo",
+      "Daley"
+    ],
+    "opstelling": null,
+    "uitslag": {
+      "thuis": 0,
+      "uit": 0
+    },
+    "doelpunten": {},
+    "gepubliceerd": false
   }
 ]
