@@ -16,12 +16,157 @@
       "Lorenzo",
       "Daley"
     ],
-    "opstelling": null,
+    "opstelling": {
+      "periodes": [
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Lorenzo",
+            "Kick",
+            "Noah"
+          ],
+          "veld": [
+            "Nyjah",
+            "Axel",
+            "Benjamin",
+            "Julian",
+            "Daley"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Benjamin",
+            "Julian",
+            "Nyjah"
+          ],
+          "veld": [
+            "Noah",
+            "Kick",
+            "Axel",
+            "Lorenzo",
+            "Daley"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Daley",
+            "Axel",
+            "Noah"
+          ],
+          "veld": [
+            "Kick",
+            "Nyjah",
+            "Benjamin",
+            "Julian",
+            "Lorenzo"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Kick",
+            "Nyjah",
+            "Benjamin"
+          ],
+          "veld": [
+            "Noah",
+            "Axel",
+            "Julian",
+            "Lorenzo",
+            "Daley"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Lorenzo",
+            "Julian",
+            "Axel"
+          ],
+          "veld": [
+            "Noah",
+            "Kick",
+            "Nyjah",
+            "Benjamin",
+            "Daley"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Daley",
+            "Kick",
+            "Noah"
+          ],
+          "veld": [
+            "Nyjah",
+            "Axel",
+            "Benjamin",
+            "Julian",
+            "Lorenzo"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Benjamin",
+            "Nyjah",
+            "Axel"
+          ],
+          "veld": [
+            "Noah",
+            "Kick",
+            "Julian",
+            "Lorenzo",
+            "Daley"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Lorenzo",
+            "Daley",
+            "Julian"
+          ],
+          "veld": [
+            "Noah",
+            "Kick",
+            "Nyjah",
+            "Axel",
+            "Benjamin"
+          ]
+        }
+      ],
+      "aanwezig": [
+        "Nick",
+        "Noah",
+        "Kick",
+        "Nyjah",
+        "Axel",
+        "Benjamin",
+        "Julian",
+        "Lorenzo",
+        "Daley"
+      ],
+      "datum": "2026-06-07",
+      "tegenstander": "AVV Swift JO10-1"
+    },
     "uitslag": {
       "thuis": 0,
       "uit": 0
     },
-    "doelpunten": {},
-    "gepubliceerd": false
+    "doelpunten": {
+      "Noah": 0,
+      "Kick": 0,
+      "Nyjah": 0,
+      "Axel": 0,
+      "Benjamin": 0,
+      "Julian": 0,
+      "Lorenzo": 0,
+      "Daley": 0
+    },
+    "gepubliceerd": true
   }
 ]
