@@ -6,14 +6,7 @@
 <title>AFC'34 JO10-2 — Coach</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --blauw:#0A1F5C;--blauw2:#1A3A8A;--blauw3:#2B52CC;
-  --geel:#FFD700;--geel2:#FFF3CD;
-  --groen:#E8F5E9;--groen2:#2e7d32;
-  --rood:#FFEBEE;--rood2:#c62828;
-  --wit:#fff;--grijs:#F4F6FA;--grijs2:#DDE3EE;
-  --tekst:#0D1B3E;--muted:#6b7a99;
-}
+:root{--blauw:#0A1F5C;--blauw2:#1A3A8A;--blauw3:#2B52CC;--geel:#FFD700;--geel2:#FFF3CD;--groen:#E8F5E9;--groen2:#2e7d32;--rood:#FFEBEE;--rood2:#c62828;--wit:#fff;--grijs:#F4F6FA;--grijs2:#DDE3EE;--tekst:#0D1B3E;--muted:#6b7a99;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Barlow',sans-serif;background:var(--blauw);min-height:100vh;color:var(--tekst);}
 
@@ -39,13 +32,12 @@ body{font-family:'Barlow',sans-serif;background:var(--blauw);min-height:100vh;co
 .btn-primary:hover{background:var(--blauw2);}
 .login-err{color:var(--rood2);font-size:12px;margin-top:8px;text-align:center;}
 
-.grid{display:grid;grid-template-columns:280px 1fr;gap:14px;max-width:1300px;}
+.grid{display:grid;grid-template-columns:280px 1fr;gap:14px;max-width:1400px;}
 @media(max-width:700px){.grid{grid-template-columns:1fr;}}
 
 .card{background:var(--wit);border-radius:12px;border:1px solid var(--grijs2);padding:16px;margin-bottom:12px;}
 .card-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;color:var(--blauw);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--geel);}
 
-/* Checkboxen - klik op de rij, niet via label/input conflict */
 .speler-rij{display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:7px;cursor:pointer;user-select:none;transition:background 0.1s;}
 .speler-rij:hover{background:var(--grijs);}
 .speler-rij.aan .cb-box{background:var(--blauw3);border-color:var(--blauw3);}
@@ -55,20 +47,25 @@ body{font-family:'Barlow',sans-serif;background:var(--blauw);min-height:100vh;co
 .cb-naam{font-size:13px;font-weight:500;color:var(--tekst);}
 .keeper-label{font-size:10px;background:var(--geel);color:var(--blauw);padding:1px 5px;border-radius:3px;font-weight:700;margin-left:auto;}
 
-.wed-item{background:var(--wit);border-radius:9px;border:1.5px solid var(--grijs2);padding:12px 14px;cursor:pointer;transition:border-color 0.15s;display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.wed-item{background:var(--wit);border-radius:9px;border:1.5px solid var(--grijs2);padding:11px 13px;cursor:pointer;transition:border-color 0.15s;display:flex;align-items:center;gap:9px;margin-bottom:8px;}
 .wed-item:hover{border-color:var(--blauw3);}
 .wed-item.actief{border-color:var(--blauw);background:#EEF2FF;}
-.wed-datum{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.4px;min-width:60px;}
+.wed-datum{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;min-width:58px;}
 .wed-naam{font-weight:600;font-size:13px;color:var(--tekst);flex:1;}
 .wed-meta{font-size:11px;color:var(--muted);}
 .badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;text-transform:uppercase;}
 .badge-groen{background:#e8f5e9;color:#2e7d32;}
 .badge-geel{background:var(--geel2);color:#7A5800;}
+.soort-badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;}
+.sb-thuis{background:#e8f5e9;color:#2e7d32;}
+.sb-uit{background:#e3f2fd;color:#1565c0;}
+.sb-toernooi{background:var(--geel2);color:#7A5800;}
 
 .form-group{margin-bottom:10px;}
 .form-group label{display:block;font-size:11px;font-weight:600;color:var(--blauw2);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.4px;}
-.form-group input{width:100%;padding:8px 10px;border:1.5px solid var(--grijs2);border-radius:7px;font-family:'Barlow',sans-serif;font-size:13px;color:var(--tekst);outline:none;}
-.form-group input:focus{border-color:var(--blauw3);}
+.form-group input,.form-group select{width:100%;padding:8px 10px;border:1.5px solid var(--grijs2);border-radius:7px;font-family:'Barlow',sans-serif;font-size:13px;color:var(--tekst);outline:none;background:var(--wit);}
+.form-group input:focus,.form-group select:focus{border-color:var(--blauw3);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
 
 .btn-gen{padding:9px 16px;background:var(--blauw3);color:#fff;border:none;border-radius:8px;font-family:'Barlow',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
 .btn-gen:hover{background:var(--blauw2);}
@@ -81,7 +78,7 @@ body{font-family:'Barlow',sans-serif;background:var(--blauw);min-height:100vh;co
 
 .helft-label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;color:var(--geel);background:var(--blauw);padding:6px 12px;border-radius:7px 7px 0 0;letter-spacing:1px;display:inline-block;}
 .opr-wrap{overflow-x:auto;}
-.opr-tabel{width:100%;border-collapse:collapse;font-size:12px;min-width:320px;margin-bottom:10px;}
+.opr-tabel{width:100%;border-collapse:collapse;font-size:12px;min-width:300px;margin-bottom:10px;}
 .opr-tabel th{background:var(--blauw);color:var(--geel);font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;padding:6px 8px;text-align:center;border-right:1px solid rgba(255,255,255,0.1);}
 .opr-tabel th.rij-hdr{background:var(--blauw2);text-align:left;min-width:60px;}
 .opr-tabel td{padding:6px 8px;text-align:center;border:1px solid var(--grijs2);font-weight:500;}
@@ -93,6 +90,19 @@ body{font-family:'Barlow',sans-serif;background:var(--blauw);min-height:100vh;co
 .tabellen-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 @media(max-width:600px){.tabellen-grid{grid-template-columns:1fr;}}
 
+/* Scorebord coach */
+.scorebord-coach{display:flex;align-items:center;gap:12px;background:var(--blauw);border-radius:10px;padding:14px 18px;margin-bottom:14px;flex-wrap:wrap;}
+.sc-team{flex:1;min-width:100px;}
+.sc-naam{font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.4px;margin-bottom:6px;}
+.sc-teller{display:flex;align-items:center;gap:8px;}
+.sc-btn{width:30px;height:30px;border-radius:50%;border:none;cursor:pointer;font-size:17px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sc-btn:active{transform:scale(0.9);}
+.sc-min{background:var(--rood);color:var(--rood2);}
+.sc-plus{background:var(--groen);color:var(--groen2);}
+.sc-getal{font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:800;color:var(--geel);min-width:32px;text-align:center;}
+.sc-sep{width:2px;height:50px;background:rgba(255,255,255,0.15);flex-shrink:0;}
+
+/* Doelpunten grid */
 .doel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px;}
 .doel-card{background:var(--grijs);border:1.5px solid var(--grijs2);border-radius:9px;padding:10px;text-align:center;}
 .doel-naam{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;color:var(--blauw);text-transform:uppercase;margin-bottom:7px;}
@@ -102,14 +112,11 @@ body{font-family:'Barlow',sans-serif;background:var(--blauw);min-height:100vh;co
 .doel-min{background:var(--rood);color:var(--rood2);}
 .doel-plus{background:var(--groen);color:var(--groen2);}
 .doel-count{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--blauw);min-width:24px;}
-
-.uitslag-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px;}
-.uitslag-inp{width:54px;text-align:center;font-size:18px;font-weight:700;padding:5px;border:2px solid var(--grijs2);border-radius:8px;outline:none;}
-.uitslag-inp:focus{border-color:var(--blauw3);}
+.doel-ballen{font-size:14px;margin-top:3px;min-height:18px;}
 
 .actie-bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;}
 
-/* Extra-bankbeurt dialoog overlay */
+/* Extra bankbeurt dialoog */
 .overlay{position:fixed;inset:0;background:rgba(10,31,92,0.55);z-index:500;display:flex;align-items:center;justify-content:center;padding:20px;}
 .dialoog{background:var(--wit);border-radius:14px;padding:24px;width:100%;max-width:380px;border:1px solid var(--grijs2);}
 .dialoog h3{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;color:var(--blauw);margin-bottom:6px;}
@@ -136,7 +143,6 @@ body{font-family:'Barlow',sans-serif;background:var(--blauw);min-height:100vh;co
   </div>
 </div>
 
-<!-- Login -->
 <div id="viewLogin">
   <div class="login-wrap">
     <div class="login-card">
@@ -157,7 +163,6 @@ body{font-family:'Barlow',sans-serif;background:var(--blauw);min-height:100vh;co
   </div>
 </div>
 
-<!-- Dashboard -->
 <div id="viewDash" style="display:none" class="content">
   <div class="grid">
     <div>
@@ -165,8 +170,19 @@ body{font-family:'Barlow',sans-serif;background:var(--blauw);min-height:100vh;co
         <div class="card-title">📅 Wedstrijden</div>
         <button class="btn-gen" style="width:100%;margin-bottom:10px" onclick="toonNieuwForm()">+ Nieuwe wedstrijd</button>
         <div id="nieuwForm" style="display:none;margin-bottom:12px">
-          <div class="form-group"><label>Datum</label><input type="date" id="nwDatum"></div>
+          <div class="form-row">
+            <div class="form-group"><label>Datum</label><input type="date" id="nwDatum"></div>
+            <div class="form-group"><label>Tijdstip</label><input type="time" id="nwTijd"></div>
+          </div>
           <div class="form-group"><label>Tegenstander</label><input type="text" id="nwTeg" placeholder="bv. HSV JO10-1"></div>
+          <div class="form-group">
+            <label>Type wedstrijd</label>
+            <select id="nwSoort">
+              <option value="thuis">🏠 Thuis</option>
+              <option value="uit">🚌 Uit</option>
+              <option value="toernooi">🏆 Toernooi</option>
+            </select>
+          </div>
           <div style="display:flex;gap:8px">
             <button class="btn-gen" onclick="maakWedstrijd()" style="flex:1">Aanmaken</button>
             <button class="btn-sec" onclick="sluitForm()">Annuleer</button>
@@ -221,8 +237,6 @@ let gh = { user:'', repo:'', token:'' };
 let wedstrijden = [];
 let actiefId = null;
 let bezig = false;
-
-// Dialoog state
 let extraResolve = null;
 let extraWissels = [];
 let extraNodig = 0;
@@ -246,7 +260,6 @@ function uitloggen() {
   document.getElementById('headerRight').style.display = 'none';
 }
 function loginErr(msg) { document.getElementById('loginErr').textContent = msg; }
-
 async function openDash() {
   document.getElementById('viewLogin').style.display = 'none';
   document.getElementById('viewDash').style.display = '';
@@ -279,9 +292,8 @@ async function laadData() {
   setSaveStatus('Laden...');
   try {
     const file = await ghGet('data.json');
-    if (file) {
-      wedstrijden = JSON.parse(decodeURIComponent(escape(atob(file.content.replace(/\n/g,'')))));
-    } else { wedstrijden = []; }
+    if (file) wedstrijden = JSON.parse(decodeURIComponent(escape(atob(file.content.replace(/\n/g,'')))));
+    else wedstrijden = [];
     setSaveStatus('');
   } catch(e) { setSaveStatus('⚠️ Laad fout'); toast('Fout bij laden: ' + e.message); }
 }
@@ -303,14 +315,18 @@ function toonNieuwForm() {
   const f = document.getElementById('nieuwForm');
   f.style.display = f.style.display === 'none' ? '' : 'none';
   document.getElementById('nwDatum').value = new Date().toISOString().slice(0,10);
+  document.getElementById('nwTijd').value = '';
 }
 function sluitForm() { document.getElementById('nieuwForm').style.display = 'none'; }
 async function maakWedstrijd() {
   const datum = document.getElementById('nwDatum').value;
   const teg   = document.getElementById('nwTeg').value.trim();
+  const soort = document.getElementById('nwSoort').value;
+  const tijd  = document.getElementById('nwTijd').value;
   if (!datum || !teg) { toast('Vul datum en tegenstander in'); return; }
-  const w = { id: Date.now(), datum, tegenstander: teg, aanwezig: [...SPELERS],
-              opstelling: null, uitslag: { thuis: 0, uit: 0 }, doelpunten: {}, gepubliceerd: false };
+  const w = { id: Date.now(), datum, tegenstander: teg, soort, tijdstip: tijd,
+              aanwezig: [...SPELERS], opstelling: null,
+              uitslag: { thuis: 0, uit: 0 }, doelpunten: {}, gepubliceerd: false };
   wedstrijden.push(w);
   actiefId = w.id;
   sluitForm();
@@ -330,13 +346,10 @@ function selecteer(id) { actiefId = id; renderCoach(); }
 function getWed() { return wedstrijden.find(w => w.id === actiefId) || null; }
 
 // ═══ AANWEZIGHEID ═══
-// Gebruik data-attribuut + onclick op de rij-div, niet via <label> met <input>
-// zodat er geen dubbele toggle plaatsvindt.
 function toggleAanwezig(naam) {
   const w = getWed(); if (!w) return;
   const i = w.aanwezig.indexOf(naam);
   if (i >= 0) w.aanwezig.splice(i, 1); else w.aanwezig.push(naam);
-  // Alleen de betreffende rij bijwerken, niet alles opnieuw renderen
   const rij = document.querySelector(`.speler-rij[data-naam="${naam}"]`);
   if (rij) rij.classList.toggle('aan', w.aanwezig.includes(naam));
 }
@@ -350,10 +363,10 @@ function renderAanwezigheid() {
   const c = document.getElementById('aanwLijst'); if (!c) return;
   c.innerHTML = SPELERS.map(sp => {
     const aan = w && w.aanwezig.includes(sp);
-    return `<div class="speler-rij ${aan ? 'aan' : ''}" data-naam="${sp}" onclick="toggleAanwezig('${sp}')">
+    return `<div class="speler-rij ${aan?'aan':''}" data-naam="${sp}" onclick="toggleAanwezig('${sp}')">
       <div class="cb-box"><span class="cb-check">✓</span></div>
       <span class="cb-naam">${sp}</span>
-      ${sp === KEEPER ? '<span class="keeper-label">keeper</span>' : ''}
+      ${sp===KEEPER?'<span class="keeper-label">keeper</span>':''}
     </div>`;
   }).join('');
 }
@@ -361,340 +374,285 @@ function renderAanwezigheid() {
 // ═══ EXTRA BANKBEURT DIALOOG ═══
 function toonExtraDialoog(wissels, nNodig, basis) {
   return new Promise(resolve => {
-    extraResolve = resolve;
-    extraWissels = wissels;
-    extraNodig   = nNodig;
-
+    extraResolve = resolve; extraWissels = wissels; extraNodig = nNodig;
     document.getElementById('extraUitleg').innerHTML =
-      `Kies precies <strong>${nNodig}</strong> speler(s) die <strong>${basis + 1}×</strong> op de bank zit(ten). ` +
+      `Kies precies <strong>${nNodig}</strong> speler(s) die <strong>${basis+1}×</strong> op de bank zit(ten). ` +
       `De overige spelers zitten <strong>${basis}×</strong> op de bank.`;
-
     document.getElementById('extraSpelers').innerHTML = wissels.map(sp =>
       `<div class="speler-rij" data-sp="${sp}" onclick="toggleExtraCb('${sp}')">
         <div class="cb-box"><span class="cb-check">✓</span></div>
         <span class="cb-naam">${sp}</span>
-      </div>`
-    ).join('');
-
+      </div>`).join('');
     updateExtraTeller();
     document.getElementById('extraOverlay').style.display = 'flex';
   });
 }
 function toggleExtraCb(sp) {
-  const rij = document.querySelector(`[data-sp="${sp}"]`);
-  if (!rij) return;
-  rij.classList.toggle('aan');
+  document.querySelector(`[data-sp="${sp}"]`).classList.toggle('aan');
   updateExtraTeller();
 }
 function updateExtraTeller() {
-  const gekozen = document.querySelectorAll('#extraSpelers .speler-rij.aan').length;
+  const n = document.querySelectorAll('#extraSpelers .speler-rij.aan').length;
   const t = document.getElementById('extraTeller');
   const ok = document.getElementById('extraOk');
-  if (gekozen < extraNodig) {
-    t.textContent = `Selecteer nog ${extraNodig - gekozen} speler(s)`;
-    t.className = 'dialoog-teller teller-wacht';
-    ok.disabled = true; ok.style.opacity = '0.5';
-  } else if (gekozen === extraNodig) {
-    t.textContent = `Klaar! ${gekozen} speler(s) geselecteerd`;
-    t.className = 'dialoog-teller teller-ok';
-    ok.disabled = false; ok.style.opacity = '1';
-  } else {
-    t.textContent = `Te veel geselecteerd (${gekozen}/${extraNodig})`;
-    t.className = 'dialoog-teller teller-teveel';
-    ok.disabled = true; ok.style.opacity = '0.5';
-  }
+  if (n < extraNodig) { t.textContent=`Selecteer nog ${extraNodig-n} speler(s)`;t.className='dialoog-teller teller-wacht';ok.disabled=true;ok.style.opacity='0.5';}
+  else if (n === extraNodig) { t.textContent=`Klaar! ${n} speler(s) geselecteerd`;t.className='dialoog-teller teller-ok';ok.disabled=false;ok.style.opacity='1';}
+  else { t.textContent=`Te veel (${n}/${extraNodig})`;t.className='dialoog-teller teller-teveel';ok.disabled=true;ok.style.opacity='0.5';}
 }
 function bevestigExtra() {
-  const gekozen = [...document.querySelectorAll('#extraSpelers .speler-rij.aan')]
-    .map(r => r.dataset.sp);
-  if (gekozen.length !== extraNodig) return;
-  document.getElementById('extraOverlay').style.display = 'none';
-  if (extraResolve) extraResolve(gekozen);
+  const gekozen=[...document.querySelectorAll('#extraSpelers .speler-rij.aan')].map(r=>r.dataset.sp);
+  if(gekozen.length!==extraNodig)return;
+  document.getElementById('extraOverlay').style.display='none';
+  if(extraResolve)extraResolve(gekozen);
 }
 function annuleerExtra() {
-  document.getElementById('extraOverlay').style.display = 'none';
-  if (extraResolve) extraResolve(null);
+  document.getElementById('extraOverlay').style.display='none';
+  if(extraResolve)extraResolve(null);
 }
 
 // ═══ GENERATOR ═══
 async function startGenereer() {
   const w = getWed(); if (!w) return;
   if (w.aanwezig.length < 6) { toast('Minimaal 6 spelers nodig!'); return; }
-
-  const aanwezig  = w.aanwezig;
-  const heeftNick = aanwezig.includes(KEEPER);
-  const wissels   = aanwezig.filter(s => s !== KEEPER);
-  const bankPP    = Math.max(0, aanwezig.length - 6);
-
-  let extraSpelers = [];
-
-  if (bankPP > 0 && wissels.length > 0) {
-    const totaal = bankPP * PERIODES;
-    const basis  = Math.floor(totaal / wissels.length);
-    const nExtra = totaal % wissels.length;
-    if (nExtra > 0) {
-      const keuze = await toonExtraDialoog(wissels, nExtra, basis);
-      if (keuze === null) return; // geannuleerd
-      extraSpelers = keuze;
+  const aanwezig=w.aanwezig, heeftNick=aanwezig.includes(KEEPER);
+  const wissels=aanwezig.filter(s=>s!==KEEPER);
+  const bankPP=Math.max(0,aanwezig.length-6);
+  let extraSpelers=[];
+  if (bankPP>0&&wissels.length>0) {
+    const totaal=bankPP*PERIODES, basis=Math.floor(totaal/wissels.length), nExtra=totaal%wissels.length;
+    if (nExtra>0) {
+      const keuze=await toonExtraDialoog(wissels,nExtra,basis);
+      if(keuze===null)return;
+      extraSpelers=keuze;
     }
   }
-
-  genereer(aanwezig, heeftNick, wissels, bankPP, extraSpelers, w);
+  genereer(aanwezig,heeftNick,wissels,bankPP,extraSpelers,w);
 }
 
-function genereer(aanwezig, heeftNick, wissels, bankPP, extraSpelers, w) {
-  const totaal = bankPP * PERIODES;
-  const basis  = wissels.length > 0 ? Math.floor(totaal / wissels.length) : 0;
-
-  // Target bankbeurten per speler
-  const target = {};
-  wissels.forEach(s => target[s] = basis + (extraSpelers.includes(s) ? 1 : 0));
-
-  // Keeper per periode
-  const keeperPP = [];
-  if (heeftNick) {
-    for (let i = 0; i < PERIODES; i++) keeperPP.push(KEEPER);
-  } else {
-    const k1 = wissels[0] || '';
-    const k2 = wissels[1] || k1;
-    for (let i = 0; i < PERIODES; i++) keeperPP.push(i < 4 ? k1 : k2);
+function genereer(aanwezig,heeftNick,wissels,bankPP,extraSpelers,w) {
+  const totaal=bankPP*PERIODES;
+  const basis=wissels.length>0?Math.floor(totaal/wissels.length):0;
+  const target={};
+  wissels.forEach(s=>target[s]=basis+(extraSpelers.includes(s)?1:0));
+  const keeperPP=[];
+  if(heeftNick){for(let i=0;i<PERIODES;i++)keeperPP.push(KEEPER);}
+  else{const k1=wissels[0]||'',k2=wissels[1]||k1;for(let i=0;i<PERIODES;i++)keeperPP.push(i<4?k1:k2);}
+  if(bankPP===0){
+    const periodes=keeperPP.map(keeper=>({keeper,veld:aanwezig.filter(s=>s!==keeper).slice(0,5),bank:[]}));
+    slaOpstelling(w,periodes,aanwezig);return;
   }
-
-  if (bankPP === 0) {
-    // Iedereen speelt altijd
-    const periodes = keeperPP.map(keeper => ({
-      keeper,
-      veld: aanwezig.filter(s => s !== keeper).slice(0, 5),
-      bank: []
-    }));
-    slaOpstelling(w, periodes, aanwezig);
-    return;
-  }
-
-  // Greedy random-restart
-  let beste = null, besteSc = Infinity;
-
-  for (let poging = 0; poging < 60000; poging++) {
-    const schema = [];
-    const tel = {};
-    wissels.forEach(s => tel[s] = 0);
-    let ok = true;
-
-    for (let p = 0; p < PERIODES; p++) {
-      const keeper = keeperPP[p];
-      const beschikbaar = wissels.filter(s => s !== keeper);
-      const vorige = p > 0 ? new Set(schema[p - 1]) : new Set();
-
-      // Kandidaten: niet vorige periode bank, niet over target
-      let kand = beschikbaar.filter(s => !vorige.has(s) && tel[s] < target[s]);
-
-      // Versoepel als te weinig kandidaten
-      if (kand.length < bankPP) {
-        kand = beschikbaar.filter(s => !vorige.has(s));
-      }
-      if (kand.length < bankPP) {
-        ok = false; break;
-      }
-
-      // Sorteer: wie het verst van target afzit gaat voor, met kleine willekeur
-      kand.sort((a, b) => (target[b] - tel[b]) - (target[a] - tel[a]) + (Math.random() - 0.5) * 0.4);
-      const bank = kand.slice(0, bankPP);
-      schema.push(bank);
-      bank.forEach(s => tel[s]++);
+  let beste=null,besteSc=Infinity;
+  for(let p=0;p<60000;p++){
+    const schema=[],tel={};wissels.forEach(s=>tel[s]=0);let ok=true;
+    for(let i=0;i<PERIODES;i++){
+      const keeper=keeperPP[i],beschikbaar=wissels.filter(s=>s!==keeper);
+      const vorige=i>0?new Set(schema[i-1]):new Set();
+      let kand=beschikbaar.filter(s=>!vorige.has(s)&&tel[s]<target[s]);
+      if(kand.length<bankPP)kand=beschikbaar.filter(s=>!vorige.has(s));
+      if(kand.length<bankPP){ok=false;break;}
+      kand.sort((a,b)=>(target[b]-tel[b])-(target[a]-tel[a])+(Math.random()-0.5)*0.4);
+      const bank=kand.slice(0,bankPP);schema.push(bank);bank.forEach(s=>tel[s]++);
     }
-
-    if (!ok) continue;
-    const sc = wissels.reduce((a, s) => a + Math.abs(tel[s] - target[s]), 0);
-    if (sc < besteSc) { besteSc = sc; beste = schema.map(b => [...b]); }
-    if (besteSc === 0) break;
+    if(!ok)continue;
+    const sc=wissels.reduce((a,s)=>a+Math.abs(tel[s]-target[s]),0);
+    if(sc<besteSc){besteSc=sc;beste=schema.map(b=>[...b]);}
+    if(besteSc===0)break;
   }
-
-  if (!beste) { toast('Kon geen geldige opstelling genereren, probeer opnieuw'); return; }
-
-  const periodes = keeperPP.map((keeper, p) => ({
-    keeper,
-    bank: beste[p],
-    veld: aanwezig.filter(s => s !== keeper && !beste[p].includes(s))
-  }));
-
-  slaOpstelling(w, periodes, aanwezig);
+  if(!beste){toast('Kon geen opstelling genereren');return;}
+  const periodes=keeperPP.map((keeper,p)=>({keeper,bank:beste[p],veld:aanwezig.filter(s=>s!==keeper&&!beste[p].includes(s))}));
+  slaOpstelling(w,periodes,aanwezig);
 }
 
-function slaOpstelling(w, periodes, aanwezig) {
-  w.opstelling = { periodes, aanwezig: [...aanwezig], datum: w.datum, tegenstander: w.tegenstander };
-  w.doelpunten = {};
-  aanwezig.filter(s => s !== KEEPER).forEach(s => w.doelpunten[s] = 0);
+function slaOpstelling(w,periodes,aanwezig){
+  w.opstelling={periodes,aanwezig:[...aanwezig],datum:w.datum,tegenstander:w.tegenstander};
+  // Behoud bestaande doelpunten, voeg nieuwe spelers toe
+  if(!w.doelpunten)w.doelpunten={};
+  aanwezig.filter(s=>s!==KEEPER).forEach(s=>{if(w.doelpunten[s]===undefined)w.doelpunten[s]=0;});
   renderRechter();
   toast('Opstelling gegenereerd! ✅');
 }
 
-// ═══ UITSLAG & DOELEN ═══
-function slaUitslagOp() {
-  const w = getWed(); if (!w) return;
-  const th = document.getElementById('uitslagThuis');
-  const ut = document.getElementById('uitslagUit');
-  if (th) w.uitslag.thuis = parseInt(th.value) || 0;
-  if (ut) w.uitslag.uit   = parseInt(ut.value) || 0;
+// ═══ SCORE BIJHOUDEN ═══
+function wijzigScore(team, delta) {
+  const w=getWed(); if(!w) return;
+  if(!w.uitslag)w.uitslag={thuis:0,uit:0};
+  if(team==='thuis')w.uitslag.thuis=Math.max(0,(w.uitslag.thuis||0)+delta);
+  else w.uitslag.uit=Math.max(0,(w.uitslag.uit||0)+delta);
+  const elT=document.getElementById('scoreThuis');
+  const elU=document.getElementById('scoreUit');
+  if(elT)elT.textContent=w.uitslag.thuis;
+  if(elU)elU.textContent=w.uitslag.uit;
 }
-function wijzigDoel(sp, d) {
-  const w = getWed(); if (!w) return;
-  w.doelpunten[sp] = Math.max(0, (w.doelpunten[sp] || 0) + d);
-  const el = document.getElementById('doel-' + sp);
-  if (el) el.textContent = w.doelpunten[sp];
+
+function wijzigDoel(sp,d){
+  const w=getWed(); if(!w) return;
+  if(!w.doelpunten)w.doelpunten={};
+  const oud=w.doelpunten[sp]||0;
+  const nieuw=Math.max(0,oud+d);
+  w.doelpunten[sp]=nieuw;
+  // Pas score automatisch aan
+  if(d!==0){
+    if(!w.uitslag)w.uitslag={thuis:0,uit:0};
+    w.uitslag.thuis=Math.max(0,(w.uitslag.thuis||0)+d);
+    const elT=document.getElementById('scoreThuis');
+    if(elT)elT.textContent=w.uitslag.thuis;
+  }
+  const el=document.getElementById('doel-'+sp);
+  const ballen=document.getElementById('ballen-'+sp);
+  if(el)el.textContent=nieuw;
+  if(ballen)ballen.textContent='⚽'.repeat(nieuw);
 }
 
 // ═══ PUBLICEREN ═══
-async function togglePubliceer(id) {
-  slaUitslagOp();
-  const w = wedstrijden.find(w => w.id === id); if (!w) return;
-  w.gepubliceerd = !w.gepubliceerd;
+async function togglePubliceer(id){
+  const w=wedstrijden.find(w=>w.id===id); if(!w) return;
+  w.gepubliceerd=!w.gepubliceerd;
   await slaOp();
   renderCoach();
-  toast(w.gepubliceerd ? '📢 Live voor ouders!' : '📴 Gedepubliceerd');
+  toast(w.gepubliceerd?'📢 Live voor ouders!':'📴 Gedepubliceerd');
 }
-async function slaHandmatigOp() {
-  slaUitslagOp();
+async function slaHandmatigOp(){
   await slaOp();
   toast('Opgeslagen ✅');
 }
 
 // ═══ RENDER ═══
-function renderCoach() {
-  const lijst = document.getElementById('wedstrijdLijst');
-  lijst.innerHTML = wedstrijden.length === 0
-    ? '<div style="color:var(--muted);font-size:12px;text-align:center;padding:8px">Nog geen wedstrijden</div>'
-    : wedstrijden.slice().reverse().map(w => `
-      <div class="wed-item ${w.id === actiefId ? 'actief' : ''}" onclick="selecteer(${w.id})">
+function soortBadge(soort){
+  if(soort==='uit')return'<span class="soort-badge sb-uit">Uit</span>';
+  if(soort==='toernooi')return'<span class="soort-badge sb-toernooi">Toernooi</span>';
+  return'<span class="soort-badge sb-thuis">Thuis</span>';
+}
+
+function renderCoach(){
+  const lijst=document.getElementById('wedstrijdLijst');
+  lijst.innerHTML=wedstrijden.length===0
+    ?'<div style="color:var(--muted);font-size:12px;text-align:center;padding:8px">Nog geen wedstrijden</div>'
+    :wedstrijden.slice().sort((a,b)=>new Date(b.datum)-new Date(a.datum)).map(w=>`
+      <div class="wed-item ${w.id===actiefId?'actief':''}" onclick="selecteer(${w.id})">
         <div class="wed-datum">${fmtDatum(w.datum)}</div>
         <div><div class="wed-naam">${escH(w.tegenstander)}</div>
-          <div class="wed-meta">${w.aanwezig.length} spelers</div></div>
-        ${w.gepubliceerd ? '<span class="badge badge-groen">Live</span>' : ''}
+          <div style="display:flex;gap:4px;margin-top:2px">${soortBadge(w.soort)}</div></div>
+        ${w.gepubliceerd?'<span class="badge badge-groen">Live</span>':''}
         <button class="btn-del" onclick="verwijderWed(${w.id},event)">✕</button>
       </div>`).join('');
-
-  document.getElementById('aanwCard').style.display = actiefId ? '' : 'none';
+  document.getElementById('aanwCard').style.display=actiefId?'':'none';
   renderAanwezigheid();
   renderRechter();
 }
 
-function renderRechter() {
-  const w = getWed();
-  const p = document.getElementById('rechterPaneel');
-  if (!w) {
-    p.innerHTML = '<div style="padding:40px;text-align:center;color:var(--muted)"><div style="font-size:36px;margin-bottom:10px">📋</div>Selecteer of maak een wedstrijd aan</div>';
-    return;
-  }
-
-  let html = `<div class="card">
+function renderRechter(){
+  const w=getWed();
+  const p=document.getElementById('rechterPaneel');
+  if(!w){p.innerHTML='<div style="padding:40px;text-align:center;color:var(--muted)"><div style="font-size:36px;margin-bottom:10px">📋</div>Selecteer of maak een wedstrijd aan</div>';return;}
+  const tijd=w.tijdstip?` · ${w.tijdstip}`:'';
+  let html=`<div class="card">
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px">
       <span style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--blauw)">AFC'34 JO10-2 vs ${escH(w.tegenstander)}</span>
-      <span class="badge ${w.gepubliceerd ? 'badge-groen' : 'badge-geel'}">${w.gepubliceerd ? 'Gepubliceerd' : 'Concept'}</span>
+      ${soortBadge(w.soort)}
+      <span style="font-size:12px;color:var(--muted)">${fmtDatum(w.datum)}${tijd}</span>
+      <span class="badge ${w.gepubliceerd?'badge-groen':'badge-geel'}">${w.gepubliceerd?'Gepubliceerd':'Concept'}</span>
     </div>
-    <div class="card-title" style="margin-bottom:8px">🥅 Uitslag</div>
-    <div class="uitslag-row">
-      <span style="font-size:13px;font-weight:600;color:var(--blauw2)">AFC'34 JO10-2</span>
-      <input type="number" min="0" max="99" class="uitslag-inp" id="uitslagThuis" value="${w.uitslag.thuis || 0}" onchange="slaUitslagOp()">
-      <span style="font-size:16px;font-weight:700;color:var(--muted)">–</span>
-      <input type="number" min="0" max="99" class="uitslag-inp" id="uitslagUit" value="${w.uitslag.uit || 0}" onchange="slaUitslagOp()">
-      <span style="font-size:13px;font-weight:600;color:var(--muted)">${escH(w.tegenstander)}</span>
+
+    <div class="card-title" style="margin-bottom:10px">🥅 Stand</div>
+    <div class="scorebord-coach">
+      <div class="sc-team">
+        <div class="sc-naam">AFC'34 JO10-2</div>
+        <div class="sc-teller">
+          <button class="sc-btn sc-min" onclick="wijzigScore('thuis',-1)">−</button>
+          <div class="sc-getal" id="scoreThuis">${w.uitslag?w.uitslag.thuis:0}</div>
+          <button class="sc-btn sc-plus" onclick="wijzigScore('thuis',1)">+</button>
+        </div>
+      </div>
+      <div class="sc-sep"></div>
+      <div class="sc-team">
+        <div class="sc-naam">${escH(w.tegenstander)}</div>
+        <div class="sc-teller">
+          <button class="sc-btn sc-min" onclick="wijzigScore('uit',-1)">−</button>
+          <div class="sc-getal" id="scoreUit">${w.uitslag?w.uitslag.uit:0}</div>
+          <button class="sc-btn sc-plus" onclick="wijzigScore('uit',1)">+</button>
+        </div>
+      </div>
     </div>`;
 
-  if (w.opstelling) {
-    html += renderOpstelling(w.opstelling);
-    html += renderDoelen(w);
-  } else {
-    html += `<div style="background:var(--grijs);border-radius:9px;padding:16px;text-align:center;color:var(--muted);margin:12px 0;font-size:13px">
+  if(w.opstelling){
+    html+=renderOpstelling(w.opstelling);
+    html+=renderDoelen(w);
+  }else{
+    html+=`<div style="background:var(--grijs);border-radius:9px;padding:16px;text-align:center;color:var(--muted);margin:12px 0;font-size:13px">
       Vink aanwezige spelers aan → klik <strong>Genereer opstelling</strong></div>`;
   }
 
-  html += `<div class="actie-bar">
-    ${w.opstelling ? `<button class="btn-sec" onclick="startGenereer()">🔄 Hergeneer</button>` : ''}
-    ${w.opstelling
-      ? (w.gepubliceerd
-          ? `<button class="btn-unpublish" onclick="togglePubliceer(${w.id})">📴 Depubliceren</button>`
-          : `<button class="btn-publish" onclick="togglePubliceer(${w.id})">📢 Publiceer naar ouders</button>`)
-      : ''}
+  html+=`<div class="actie-bar">
+    ${w.opstelling?`<button class="btn-sec" onclick="startGenereer()">🔄 Hergeneer</button>`:''}
+    ${w.opstelling?(w.gepubliceerd
+      ?`<button class="btn-unpublish" onclick="togglePubliceer(${w.id})">📴 Depubliceren</button>`
+      :`<button class="btn-publish" onclick="togglePubliceer(${w.id})">📢 Publiceer naar ouders</button>`):''}
     <button class="btn-sec" onclick="slaHandmatigOp()">💾 Opslaan</button>
   </div></div>`;
-
-  p.innerHTML = html;
+  p.innerHTML=html;
 }
 
-function renderOpstelling(opr) {
-  const periodes = opr.periodes;
-  const nBank = Math.max(...periodes.map(p => p.bank.length), 0);
-  const rijen = ['KEEPER', ...Array.from({length:5}, (_,i) => `SPELER ${i+1}`), 'SEP',
-                 ...Array.from({length:nBank}, (_,i) => `BANK ${i+1}`)];
-
-  function helft(offset, lbl) {
-    const cols = periodes.slice(offset, offset + 4);
-    let t = `<div class="helft-label">${lbl}</div><div class="opr-wrap"><table class="opr-tabel">
+function renderOpstelling(opr){
+  const periodes=opr.periodes;
+  const nBank=Math.max(...periodes.map(p=>p.bank.length),0);
+  const rijen=['KEEPER',...Array.from({length:5},(_,i)=>`SPELER ${i+1}`),'SEP',...Array.from({length:nBank},(_,i)=>`BANK ${i+1}`)];
+  function helft(offset,lbl){
+    const cols=periodes.slice(offset,offset+4);
+    let t=`<div class="helft-label">${lbl}</div><div class="opr-wrap"><table class="opr-tabel">
       <tr><th class="rij-hdr">Rol</th>`;
-    for (let i = 0; i < 4; i++) {
-      const s = (offset + i) * 375;
-      t += `<th>P${offset+i+1}<br><small>${fmtT(s)}–${fmtT(s+375)}</small></th>`;
-    }
-    t += '</tr>';
-    rijen.forEach((rij, ri) => {
-      if (rij === 'SEP') { t += `<tr><td class="rij-lbl cel-sep" colspan="5"></td></tr>`; return; }
-      t += `<tr><td class="rij-lbl">${rij}</td>`;
-      cols.forEach(p => {
-        let n = '', c = '';
-        if (ri === 0) { n = p.keeper; c = 'cel-keeper'; }
-        else if (ri <= 5) { n = p.veld[ri-1] || ''; c = 'cel-veld'; }
-        else { n = p.bank[ri-7] || ''; c = 'cel-bank'; }
-        t += `<td class="${c}">${n.toUpperCase()}</td>`;
+    for(let i=0;i<4;i++){const s=(offset+i)*375;t+=`<th>P${offset+i+1}<br><small>${fmtT(s)}–${fmtT(s+375)}</small></th>`;}
+    t+='</tr>';
+    rijen.forEach((rij,ri)=>{
+      if(rij==='SEP'){t+=`<tr><td class="rij-lbl cel-sep" colspan="5"></td></tr>`;return;}
+      t+=`<tr><td class="rij-lbl">${rij}</td>`;
+      cols.forEach(p=>{
+        let n='',c='';
+        if(ri===0){n=p.keeper;c='cel-keeper';}else if(ri<=5){n=p.veld[ri-1]||'';c='cel-veld';}else{n=p.bank[ri-7]||'';c='cel-bank';}
+        t+=`<td class="${c}">${n.toUpperCase()}</td>`;
       });
-      t += '</tr>';
+      t+='</tr>';
     });
-    t += '</table></div>';
-    return t;
+    t+='</table></div>';return t;
   }
-
-  const bankTel = {};
-  (opr.aanwezig || []).forEach(s => bankTel[s] = 0);
-  periodes.forEach(p => p.bank.forEach(s => { if (bankTel[s] !== undefined) bankTel[s]++; }));
-  const bankStr = Object.entries(bankTel).filter(([,v]) => v > 0)
-    .map(([s,v]) => `<strong>${s}</strong>: ${v}×`).join(' · ');
-
-  return `<div class="card-title" style="margin-top:14px;margin-bottom:8px">📋 Opstelling</div>
-    <div class="tabellen-grid">
-      <div>${helft(0, 'HELFT 1  00:00–25:00')}</div>
-      <div>${helft(4, 'HELFT 2  25:00–50:00')}</div>
-    </div>
-    <div style="background:var(--grijs);border-radius:7px;padding:8px 12px;font-size:12px;color:var(--muted);margin-bottom:4px">🪑 Bankbeurten: ${bankStr}</div>`;
+  const bankTel={};(opr.aanwezig||[]).forEach(s=>bankTel[s]=0);
+  periodes.forEach(p=>p.bank.forEach(s=>{if(bankTel[s]!==undefined)bankTel[s]++;}));
+  const bankStr=Object.entries(bankTel).filter(([,v])=>v>0).map(([s,v])=>`<strong>${s}</strong>: ${v}×`).join(' · ');
+  return`<div class="card-title" style="margin-top:14px;margin-bottom:8px">📋 Opstelling</div>
+    <div class="tabellen-grid"><div>${helft(0,'HELFT 1  00:00–25:00')}</div><div>${helft(4,'HELFT 2  25:00–50:00')}</div></div>
+    <div style="background:var(--grijs);border-radius:7px;padding:8px 12px;font-size:12px;color:var(--muted);margin-bottom:4px">🪑 ${bankStr}</div>`;
 }
 
-function renderDoelen(w) {
-  const veld = w.aanwezig.filter(s => s !== KEEPER);
-  if (!w.doelpunten) w.doelpunten = {};
-  veld.forEach(s => { if (w.doelpunten[s] === undefined) w.doelpunten[s] = 0; });
-  return `<div class="card-title" style="margin-top:14px;margin-bottom:8px">⚽ Doelpunten</div>
+function renderDoelen(w){
+  const veld=w.aanwezig.filter(s=>s!==KEEPER);
+  if(!w.doelpunten)w.doelpunten={};
+  veld.forEach(s=>{if(w.doelpunten[s]===undefined)w.doelpunten[s]=0;});
+  return`<div class="card-title" style="margin-top:14px;margin-bottom:8px">⚽ Doelpunten AFC'34</div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Doelpunt toevoegen past de score automatisch aan. Tegenstander: gebruik de +/− bij de stand hierboven.</div>
     <div class="doel-grid">
-      ${veld.map(s => `<div class="doel-card">
-        <div class="doel-naam">${s}</div>
-        <div class="doel-counter">
-          <button class="doel-btn doel-min" onclick="wijzigDoel('${s}',-1)">−</button>
-          <div class="doel-count" id="doel-${s}">${w.doelpunten[s] || 0}</div>
-          <button class="doel-btn doel-plus" onclick="wijzigDoel('${s}',1)">+</button>
-        </div>
-      </div>`).join('')}
+      ${veld.map(s=>{
+        const v=w.doelpunten[s]||0;
+        return`<div class="doel-card">
+          <div class="doel-naam">${s}</div>
+          <div class="doel-ballen" id="ballen-${s}">${'⚽'.repeat(v)}</div>
+          <div class="doel-counter">
+            <button class="doel-btn doel-min" onclick="wijzigDoel('${s}',-1)">−</button>
+            <div class="doel-count" id="doel-${s}">${v}</div>
+            <button class="doel-btn doel-plus" onclick="wijzigDoel('${s}',1)">+</button>
+          </div>
+        </div>`;
+      }).join('')}
     </div>`;
 }
 
 // ═══ HULP ═══
-function fmtT(sec) { return `${String(Math.floor(sec/60)).padStart(2,'0')}:${String(sec%60).padStart(2,'0')}`; }
-function fmtDatum(d) { if (!d) return ''; const [y,m,dag] = d.split('-'); return `${dag}-${m}-${y}`; }
-function escH(s) { return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-function toast(msg) {
-  const e = document.getElementById('toast');
-  e.textContent = msg; e.classList.add('show');
-  clearTimeout(e._t); e._t = setTimeout(() => e.classList.remove('show'), 2800);
-}
+function fmtT(sec){return`${String(Math.floor(sec/60)).padStart(2,'0')}:${String(sec%60).padStart(2,'0')}`;}
+function fmtDatum(d){if(!d)return'';const[y,m,dag]=d.split('-');return`${dag}-${m}-${y}`;}
+function escH(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function toast(msg){const e=document.getElementById('toast');e.textContent=msg;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),2800);}
 
 // ═══ INIT ═══
-const saved = localStorage.getItem('afc34_gh');
-if (saved) { try { gh = JSON.parse(saved); openDash(); } catch(e) {} }
+const saved=localStorage.getItem('afc34_gh');
+if(saved){try{gh=JSON.parse(saved);openDash();}catch(e){}}
 </script>
 </body>
 </html>
