@@ -154,19 +154,44 @@
       "tegenstander": "AVV Swift JO10-1"
     },
     "uitslag": {
-      "thuis": 4,
-      "uit": 1
+      "thuis": 1,
+      "uit": 0
     },
     "doelpunten": {
-      "Noah": 2,
+      "Noah": 1,
       "Kick": 0,
       "Nyjah": 0,
       "Axel": 0,
-      "Benjamin": 1,
+      "Benjamin": 0,
       "Julian": 0,
       "Lorenzo": 0,
-      "Daley": 1
+      "Daley": 0
     },
     "gepubliceerd": true
+  },
+  {
+    "id": 1780742396116,
+    "datum": "2026-06-07",
+    "tegenstander": "Always Forward JO10-1",
+    "soort": "toernooi",
+    "tijdstip": "10:30",
+    "aanwezig": [
+      "Nick",
+      "Noah",
+      "Kick",
+      "Nyjah",
+      "Axel",
+      "Benjamin",
+      "Julian",
+      "Lorenzo",
+      "Daley"
+    ],
+    "opstelling": null,
+    "uitslag": {
+      "thuis": 0,
+      "uit": 0
+    },
+    "doelpunten": {},
+    "gepubliceerd": false
   }
 ]
