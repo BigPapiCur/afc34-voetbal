@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "id": 1780739761749,
+    "datum": "2026-06-07",
+    "tegenstander": "AVV Swift JO10-1",
+    "aanwezig": [
+      "Nick",
+      "Noah",
+      "Kick",
+      "Nyjah",
+      "Axel",
+      "Benjamin",
+      "Julian",
+      "Lorenzo",
+      "Daley"
+    ],
+    "opstelling": null,
+    "uitslag": {
+      "thuis": 0,
+      "uit": 0
+    },
+    "doelpunten": {},
+    "gepubliceerd": false
+  }
+]
