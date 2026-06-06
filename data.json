@@ -21,87 +21,42 @@
         {
           "keeper": "Nick",
           "bank": [
-            "Lorenzo",
-            "Kick",
-            "Noah"
-          ],
-          "veld": [
-            "Nyjah",
-            "Axel",
-            "Benjamin",
             "Julian",
-            "Daley"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Benjamin",
-            "Julian",
-            "Nyjah"
+            "Daley",
+            "Lorenzo"
           ],
           "veld": [
             "Noah",
             "Kick",
-            "Axel",
-            "Lorenzo",
-            "Daley"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Daley",
-            "Axel",
-            "Noah"
-          ],
-          "veld": [
-            "Kick",
             "Nyjah",
-            "Benjamin",
-            "Julian",
-            "Lorenzo"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Kick",
-            "Nyjah",
+            "Axel",
             "Benjamin"
-          ],
-          "veld": [
-            "Noah",
-            "Axel",
-            "Julian",
-            "Lorenzo",
-            "Daley"
           ]
         },
         {
           "keeper": "Nick",
           "bank": [
-            "Lorenzo",
-            "Julian",
+            "Benjamin",
+            "Noah",
             "Axel"
           ],
           "veld": [
-            "Noah",
             "Kick",
             "Nyjah",
-            "Benjamin",
+            "Julian",
+            "Lorenzo",
             "Daley"
           ]
         },
         {
           "keeper": "Nick",
           "bank": [
-            "Daley",
             "Kick",
-            "Noah"
+            "Nyjah",
+            "Daley"
           ],
           "veld": [
-            "Nyjah",
+            "Noah",
             "Axel",
             "Benjamin",
             "Julian",
@@ -111,13 +66,28 @@
         {
           "keeper": "Nick",
           "bank": [
-            "Benjamin",
-            "Nyjah",
-            "Axel"
+            "Julian",
+            "Axel",
+            "Lorenzo"
           ],
           "veld": [
             "Noah",
             "Kick",
+            "Nyjah",
+            "Benjamin",
+            "Daley"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Nyjah",
+            "Kick",
+            "Noah"
+          ],
+          "veld": [
+            "Axel",
+            "Benjamin",
             "Julian",
             "Lorenzo",
             "Daley"
@@ -126,8 +96,8 @@
         {
           "keeper": "Nick",
           "bank": [
+            "Benjamin",
             "Lorenzo",
-            "Daley",
             "Julian"
           ],
           "veld": [
@@ -135,7 +105,37 @@
             "Kick",
             "Nyjah",
             "Axel",
+            "Daley"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Daley",
+            "Nyjah",
+            "Kick"
+          ],
+          "veld": [
+            "Noah",
+            "Axel",
+            "Benjamin",
+            "Julian",
+            "Lorenzo"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Noah",
+            "Axel",
             "Benjamin"
+          ],
+          "veld": [
+            "Kick",
+            "Nyjah",
+            "Julian",
+            "Lorenzo",
+            "Daley"
           ]
         }
       ],
@@ -149,9 +149,7 @@
         "Julian",
         "Lorenzo",
         "Daley"
-      ],
-      "datum": "2026-06-07",
-      "tegenstander": "AVV Swift JO10-1"
+      ]
     },
     "uitslag": {
       "thuis": 0,
@@ -186,156 +184,13 @@
       "Lorenzo",
       "Daley"
     ],
-    "opstelling": {
-      "periodes": [
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Kick",
-            "Noah",
-            "Nyjah"
-          ],
-          "veld": [
-            "Axel",
-            "Benjamin",
-            "Julian",
-            "Lorenzo",
-            "Daley"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Benjamin",
-            "Julian",
-            "Lorenzo"
-          ],
-          "veld": [
-            "Noah",
-            "Kick",
-            "Nyjah",
-            "Axel",
-            "Daley"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Axel",
-            "Daley",
-            "Noah"
-          ],
-          "veld": [
-            "Kick",
-            "Nyjah",
-            "Benjamin",
-            "Julian",
-            "Lorenzo"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Benjamin",
-            "Kick",
-            "Nyjah"
-          ],
-          "veld": [
-            "Noah",
-            "Axel",
-            "Julian",
-            "Lorenzo",
-            "Daley"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Daley",
-            "Lorenzo",
-            "Axel"
-          ],
-          "veld": [
-            "Noah",
-            "Kick",
-            "Nyjah",
-            "Benjamin",
-            "Julian"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Julian",
-            "Nyjah",
-            "Kick"
-          ],
-          "veld": [
-            "Noah",
-            "Axel",
-            "Benjamin",
-            "Lorenzo",
-            "Daley"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Lorenzo",
-            "Axel",
-            "Noah"
-          ],
-          "veld": [
-            "Kick",
-            "Nyjah",
-            "Benjamin",
-            "Julian",
-            "Daley"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Benjamin",
-            "Julian",
-            "Daley"
-          ],
-          "veld": [
-            "Noah",
-            "Kick",
-            "Nyjah",
-            "Axel",
-            "Lorenzo"
-          ]
-        }
-      ],
-      "aanwezig": [
-        "Nick",
-        "Noah",
-        "Kick",
-        "Nyjah",
-        "Axel",
-        "Benjamin",
-        "Julian",
-        "Lorenzo",
-        "Daley"
-      ]
-    },
+    "opstelling": null,
     "uitslag": {
       "thuis": 0,
       "uit": 0
     },
-    "doelpunten": {
-      "Noah": 0,
-      "Kick": 0,
-      "Nyjah": 0,
-      "Axel": 0,
-      "Benjamin": 0,
-      "Julian": 0,
-      "Lorenzo": 0,
-      "Daley": 0
-    },
-    "gepubliceerd": true
+    "doelpunten": {},
+    "gepubliceerd": false
   },
   {
     "id": 1780742951876,
@@ -354,155 +209,12 @@
       "Lorenzo",
       "Daley"
     ],
-    "opstelling": {
-      "periodes": [
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Nyjah",
-            "Kick",
-            "Benjamin"
-          ],
-          "veld": [
-            "Noah",
-            "Axel",
-            "Julian",
-            "Lorenzo",
-            "Daley"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Axel",
-            "Daley",
-            "Noah"
-          ],
-          "veld": [
-            "Kick",
-            "Nyjah",
-            "Benjamin",
-            "Julian",
-            "Lorenzo"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Julian",
-            "Lorenzo",
-            "Kick"
-          ],
-          "veld": [
-            "Noah",
-            "Nyjah",
-            "Axel",
-            "Benjamin",
-            "Daley"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Noah",
-            "Nyjah",
-            "Daley"
-          ],
-          "veld": [
-            "Kick",
-            "Axel",
-            "Benjamin",
-            "Julian",
-            "Lorenzo"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Benjamin",
-            "Axel",
-            "Julian"
-          ],
-          "veld": [
-            "Noah",
-            "Kick",
-            "Nyjah",
-            "Lorenzo",
-            "Daley"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Lorenzo",
-            "Nyjah",
-            "Noah"
-          ],
-          "veld": [
-            "Kick",
-            "Axel",
-            "Benjamin",
-            "Julian",
-            "Daley"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Axel",
-            "Julian",
-            "Kick"
-          ],
-          "veld": [
-            "Noah",
-            "Nyjah",
-            "Benjamin",
-            "Lorenzo",
-            "Daley"
-          ]
-        },
-        {
-          "keeper": "Nick",
-          "bank": [
-            "Lorenzo",
-            "Daley",
-            "Benjamin"
-          ],
-          "veld": [
-            "Noah",
-            "Kick",
-            "Nyjah",
-            "Axel",
-            "Julian"
-          ]
-        }
-      ],
-      "aanwezig": [
-        "Nick",
-        "Noah",
-        "Kick",
-        "Nyjah",
-        "Axel",
-        "Benjamin",
-        "Julian",
-        "Lorenzo",
-        "Daley"
-      ]
-    },
+    "opstelling": null,
     "uitslag": {
       "thuis": 0,
       "uit": 0
     },
-    "doelpunten": {
-      "Noah": 0,
-      "Kick": 0,
-      "Nyjah": 0,
-      "Axel": 0,
-      "Benjamin": 0,
-      "Julian": 0,
-      "Lorenzo": 0,
-      "Daley": 0
-    },
-    "gepubliceerd": true
+    "doelpunten": {},
+    "gepubliceerd": false
   }
 ]
