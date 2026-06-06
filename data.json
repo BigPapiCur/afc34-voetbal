@@ -334,5 +334,28 @@
       "Daley": 0
     },
     "gepubliceerd": false
+  },
+  {
+    "id": 1780741223615,
+    "datum": "2026-06-06",
+    "tegenstander": "pipo",
+    "aanwezig": [
+      "Nick",
+      "Noah",
+      "Kick",
+      "Nyjah",
+      "Axel",
+      "Benjamin",
+      "Julian",
+      "Lorenzo",
+      "Daley"
+    ],
+    "opstelling": null,
+    "uitslag": {
+      "thuis": 0,
+      "uit": 0
+    },
+    "doelpunten": {},
+    "gepubliceerd": false
   }
 ]
