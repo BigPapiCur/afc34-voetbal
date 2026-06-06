@@ -154,11 +154,11 @@
       "tegenstander": "AVV Swift JO10-1"
     },
     "uitslag": {
-      "thuis": 1,
+      "thuis": 0,
       "uit": 0
     },
     "doelpunten": {
-      "Noah": 1,
+      "Noah": 0,
       "Kick": 0,
       "Nyjah": 0,
       "Axel": 0,
@@ -211,12 +211,155 @@
       "Lorenzo",
       "Daley"
     ],
-    "opstelling": null,
+    "opstelling": {
+      "periodes": [
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Nyjah",
+            "Kick",
+            "Benjamin"
+          ],
+          "veld": [
+            "Noah",
+            "Axel",
+            "Julian",
+            "Lorenzo",
+            "Daley"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Axel",
+            "Daley",
+            "Noah"
+          ],
+          "veld": [
+            "Kick",
+            "Nyjah",
+            "Benjamin",
+            "Julian",
+            "Lorenzo"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Julian",
+            "Lorenzo",
+            "Kick"
+          ],
+          "veld": [
+            "Noah",
+            "Nyjah",
+            "Axel",
+            "Benjamin",
+            "Daley"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Noah",
+            "Nyjah",
+            "Daley"
+          ],
+          "veld": [
+            "Kick",
+            "Axel",
+            "Benjamin",
+            "Julian",
+            "Lorenzo"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Benjamin",
+            "Axel",
+            "Julian"
+          ],
+          "veld": [
+            "Noah",
+            "Kick",
+            "Nyjah",
+            "Lorenzo",
+            "Daley"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Lorenzo",
+            "Nyjah",
+            "Noah"
+          ],
+          "veld": [
+            "Kick",
+            "Axel",
+            "Benjamin",
+            "Julian",
+            "Daley"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Axel",
+            "Julian",
+            "Kick"
+          ],
+          "veld": [
+            "Noah",
+            "Nyjah",
+            "Benjamin",
+            "Lorenzo",
+            "Daley"
+          ]
+        },
+        {
+          "keeper": "Nick",
+          "bank": [
+            "Lorenzo",
+            "Daley",
+            "Benjamin"
+          ],
+          "veld": [
+            "Noah",
+            "Kick",
+            "Nyjah",
+            "Axel",
+            "Julian"
+          ]
+        }
+      ],
+      "aanwezig": [
+        "Nick",
+        "Noah",
+        "Kick",
+        "Nyjah",
+        "Axel",
+        "Benjamin",
+        "Julian",
+        "Lorenzo",
+        "Daley"
+      ]
+    },
     "uitslag": {
       "thuis": 0,
       "uit": 0
     },
-    "doelpunten": {},
-    "gepubliceerd": false
+    "doelpunten": {
+      "Noah": 0,
+      "Kick": 0,
+      "Nyjah": 0,
+      "Axel": 0,
+      "Benjamin": 0,
+      "Julian": 0,
+      "Lorenzo": 0,
+      "Daley": 0
+    },
+    "gepubliceerd": true
   }
 ]
