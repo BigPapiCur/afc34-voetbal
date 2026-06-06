@@ -4,280 +4,243 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AFC'34 JO10-2</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--blauw:#0A1F5C;--blauw2:#1A3A8A;--blauw3:#2B52CC;--geel:#FFD700;--geel2:#FFF3CD;--groen:#E8F5E9;--groen2:#2e7d32;--rood:#FFEBEE;--rood2:#c62828;--wit:#fff;--grijs:#F4F6FA;--grijs2:#DDE3EE;--tekst:#0D1B3E;--muted:#6b7a99;}
+:root{
+  --blauw:#0A1F5C;--blauw2:#1A3A8A;--blauw3:#2B52CC;
+  --geel:#FFD700;--geel2:#FFF3CD;
+  --groen:#E8F5E9;--groen2:#2e7d32;
+  --wit:#fff;--grijs:#F0F2F8;--grijs2:#DDE3EE;
+  --tekst:#0D1B3E;--muted:#6b7a99;
+  --r:12px;
+}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Barlow',sans-serif;background:var(--grijs);min-height:100vh;color:var(--tekst);}
 
-.header{background:var(--blauw);padding:0 20px;display:flex;align-items:center;gap:12px;height:60px;border-bottom:3px solid var(--geel);position:sticky;top:0;z-index:10;}
-.header-logo{width:34px;height:34px;background:var(--geel);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;color:var(--blauw);line-height:1.1;text-align:center;}
-.header-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;color:var(--geel);}
-.refresh-btn{margin-left:auto;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);padding:6px 12px;border-radius:6px;font-family:'Barlow',sans-serif;font-size:12px;cursor:pointer;}
-.refresh-btn:hover{background:rgba(255,255,255,0.18);color:#fff;}
+/* Header */
+.hdr{background:var(--blauw);display:flex;align-items:center;gap:12px;padding:0 16px;height:56px;border-bottom:3px solid var(--geel);position:sticky;top:0;z-index:20;}
+.hdr-logo{width:32px;height:32px;background:var(--geel);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:10px;color:var(--blauw);line-height:1.1;text-align:center;flex-shrink:0;}
+.hdr-titel{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:17px;color:var(--geel);}
+.hdr-refresh{margin-left:auto;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);padding:5px 11px;border-radius:6px;font-size:12px;cursor:pointer;white-space:nowrap;}
 
-.content{max-width:700px;margin:0 auto;padding:20px 16px;}
+/* Pagina's */
+.pagina{max-width:680px;margin:0 auto;padding:16px;}
 
-.leeg{text-align:center;padding:80px 20px;color:var(--muted);font-size:15px;}
-.leeg-icon{font-size:48px;margin-bottom:16px;opacity:0.4;}
-.loader{text-align:center;padding:60px 20px;color:var(--muted);font-size:14px;}
+/* Lege staat */
+.leeg{text-align:center;padding:60px 20px;color:var(--muted);}
+.leeg-icon{font-size:44px;margin-bottom:12px;opacity:0.35;display:block;}
 
-/* Wedstrijd kaart op overzichtspagina */
-.wed-kaart{background:var(--wit);border-radius:14px;border:1px solid var(--grijs2);margin-bottom:14px;overflow:hidden;cursor:pointer;transition:box-shadow 0.15s,border-color 0.15s;}
-.wed-kaart:hover{border-color:var(--blauw3);box-shadow:0 3px 12px rgba(10,31,92,0.1);}
-.wed-kaart-header{background:var(--blauw);padding:14px 18px;display:flex;align-items:center;gap:12px;}
-.wed-soort{font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px;}
-.soort-thuis{background:#e8f5e9;color:#2e7d32;}
-.soort-uit{background:#e3f2fd;color:#1565c0;}
-.soort-toernooi{background:var(--geel2);color:#7A5800;}
-.wed-vs{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;color:#fff;}
-.wed-datum-lbl{font-size:11px;color:rgba(255,255,255,0.5);margin-top:2px;}
-.wed-score-lbl{margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:800;color:var(--geel);letter-spacing:2px;}
-.wed-kaart-body{padding:14px 18px;}
-.wed-info-rij{display:flex;gap:8px;flex-wrap:wrap;}
-.info-pill{font-size:11px;color:var(--muted);background:var(--grijs);border:1px solid var(--grijs2);border-radius:20px;padding:3px 10px;}
-.info-pill strong{color:var(--tekst);}
-.goals-preview{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
-.goal-tag{background:var(--groen);color:var(--groen2);font-size:12px;font-weight:600;padding:3px 10px;border-radius:20px;font-family:'Barlow Condensed',sans-serif;}
-.detail-link{display:inline-flex;align-items:center;gap:5px;margin-top:10px;font-size:12px;font-weight:600;color:var(--blauw3);}
+/* ── Overzicht kaarten ── */
+.wed-kaart{background:var(--wit);border-radius:var(--r);border:1px solid var(--grijs2);margin-bottom:12px;overflow:hidden;cursor:pointer;transition:transform 0.12s,box-shadow 0.12s;}
+.wed-kaart:active{transform:scale(0.985);}
+.wed-kaart:hover{box-shadow:0 4px 16px rgba(10,31,92,0.1);}
 
-/* Detail pagina */
-.terug-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;background:var(--wit);border:1.5px solid var(--grijs2);border-radius:8px;font-family:'Barlow',sans-serif;font-size:13px;font-weight:600;color:var(--blauw2);cursor:pointer;margin-bottom:14px;}
-.terug-btn:hover{border-color:var(--blauw2);}
+.wed-kaart-hdr{background:var(--blauw);padding:14px 16px;display:flex;align-items:flex-start;justify-content:space-between;gap:10px;}
+.wed-kaart-links{}
+.wed-badge-rij{display:flex;align-items:center;gap:7px;margin-bottom:6px;}
+.soort-pill{font-size:10px;font-weight:700;padding:2px 9px;border-radius:20px;text-transform:uppercase;letter-spacing:0.4px;}
+.sp-thuis{background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9);}
+.sp-uit{background:rgba(59,139,212,0.3);color:#90caf9;}
+.sp-toernooi{background:rgba(255,215,0,0.2);color:var(--geel);}
+.wed-kaart-vs{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:#fff;line-height:1.2;}
+.wed-kaart-meta{font-size:11px;color:rgba(255,255,255,0.5);margin-top:3px;}
 
-.detail-header{background:var(--blauw);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
-.detail-vs{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:#fff;margin-bottom:4px;}
-.detail-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
-.detail-datum{font-size:12px;color:rgba(255,255,255,0.55);}
+.wed-kaart-score{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;color:var(--geel);letter-spacing:1px;white-space:nowrap;line-height:1;}
 
-/* Scorebord */
-.scorebord{display:flex;align-items:center;background:rgba(255,255,255,0.1);border-radius:10px;padding:14px 20px;margin-top:12px;gap:0;}
-.score-team{flex:1;text-align:center;}
-.score-teamnaam{font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.4px;margin-bottom:4px;}
-.score-getal{font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:800;color:var(--geel);line-height:1;}
-.score-sep{width:2px;height:56px;background:rgba(255,255,255,0.15);}
+.wed-kaart-body{padding:12px 16px;}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+.pill{font-size:11px;color:var(--muted);background:var(--grijs);border:1px solid var(--grijs2);border-radius:20px;padding:3px 10px;}
+.pill strong{color:var(--tekst);}
+.scorer-rij{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+.scorer-chip{background:var(--groen);color:var(--groen2);font-size:12px;font-weight:600;padding:4px 11px;border-radius:20px;font-family:'Barlow Condensed',sans-serif;letter-spacing:0.2px;}
+.detail-link{font-size:12px;font-weight:600;color:var(--blauw3);display:flex;align-items:center;gap:3px;}
 
-.detail-card{background:var(--wit);border-radius:12px;border:1px solid var(--grijs2);padding:16px 18px;margin-bottom:12px;}
-.detail-card-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;color:var(--blauw);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--geel);}
+/* ── Detail pagina ── */
+.terug{display:inline-flex;align-items:center;gap:6px;padding:7px 13px;background:var(--wit);border:1.5px solid var(--grijs2);border-radius:8px;font-size:13px;font-weight:600;color:var(--blauw2);cursor:pointer;margin-bottom:14px;}
 
-.scorers-lijst{display:flex;flex-wrap:wrap;gap:7px;}
-.scorer-tag{display:flex;align-items:center;gap:5px;background:var(--groen);color:var(--groen2);font-size:13px;font-weight:600;padding:5px 12px;border-radius:20px;font-family:'Barlow Condensed',sans-serif;}
-.scorer-ballen{display:flex;gap:2px;}
+.det-hdr{background:var(--blauw);border-radius:var(--r);padding:16px;margin-bottom:12px;}
+.det-badge-rij{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.det-vs{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;}
+.det-meta{font-size:12px;color:rgba(255,255,255,0.5);}
 
-.helft-label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;color:var(--geel);background:var(--blauw);padding:6px 12px;border-radius:7px 7px 0 0;letter-spacing:1px;display:inline-block;}
-.opr-wrap{overflow-x:auto;}
-.opr-tabel{width:100%;border-collapse:collapse;font-size:12px;min-width:300px;margin-bottom:10px;}
-.opr-tabel th{background:var(--blauw);color:var(--geel);font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;padding:6px 8px;text-align:center;border-right:1px solid rgba(255,255,255,0.1);}
-.opr-tabel th.rij-hdr{background:var(--blauw2);text-align:left;min-width:60px;}
-.opr-tabel td{padding:6px 8px;text-align:center;border:1px solid var(--grijs2);font-weight:500;font-size:12px;}
-.opr-tabel td.rij-lbl{background:var(--blauw);color:var(--geel);font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;text-align:left;padding-left:8px;}
-.cel-keeper{background:#1A3A8A;color:#fff;font-weight:700;}
-.cel-veld{background:#E8F5E9;color:#1b5e20;}
-.cel-bank{background:#FFF3CD;color:#7A5800;}
-.cel-sep{background:#C8D8F0;height:5px;padding:0!important;}
-.tabellen-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-@media(max-width:600px){.tabellen-grid{grid-template-columns:1fr;}}
+.scorebord{display:flex;align-items:center;background:rgba(255,255,255,0.1);border-radius:10px;padding:14px 16px;margin-top:12px;}
+.sb-team{flex:1;text-align:center;}
+.sb-naam{font-size:11px;font-weight:600;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.4px;margin-bottom:5px;}
+.sb-getal{font-family:'Barlow Condensed',sans-serif;font-size:42px;font-weight:800;color:var(--geel);line-height:1;}
+.sb-sep{width:2px;height:52px;background:rgba(255,255,255,0.15);}
 
-.bank-summary{background:var(--grijs);border-radius:8px;padding:8px 12px;font-size:12px;color:var(--muted);}
+.det-card{background:var(--wit);border-radius:var(--r);border:1px solid var(--grijs2);padding:14px 16px;margin-bottom:12px;}
+.det-card-titel{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;color:var(--blauw);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:11px;padding-bottom:8px;border-bottom:2px solid var(--geel);}
+
+.scorers{display:flex;flex-wrap:wrap;gap:7px;}
+.scorer-tag{display:flex;align-items:center;gap:6px;background:var(--groen);color:var(--groen2);font-size:13px;font-weight:600;padding:5px 12px;border-radius:20px;font-family:'Barlow Condensed',sans-serif;}
+
+/* Opstelling */
+.h-lbl{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;color:var(--geel);background:var(--blauw);padding:5px 11px;border-radius:6px 6px 0 0;letter-spacing:1px;display:inline-block;}
+.opr-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.opr-tbl{width:100%;border-collapse:collapse;font-size:11px;min-width:280px;margin-bottom:10px;}
+.opr-tbl th{background:var(--blauw);color:var(--geel);font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;padding:5px 7px;text-align:center;}
+.opr-tbl th.rh{background:var(--blauw2);text-align:left;min-width:54px;}
+.opr-tbl td{padding:5px 7px;text-align:center;border:1px solid var(--grijs2);font-weight:500;font-size:11px;}
+.opr-tbl td.rl{background:var(--blauw);color:var(--geel);font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;text-align:left;padding-left:7px;}
+.ck{background:#1A3A8A;color:#fff;font-weight:700;}
+.cv{background:#E8F5E9;color:#1b5e20;}
+.cb{background:#FFF3CD;color:#7A5800;}
+.cs{background:#C8D8F0;height:4px;padding:0!important;}
+.opr-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+@media(max-width:500px){.opr-grid{grid-template-columns:1fr;}}
+.bank-bar{background:var(--grijs);border-radius:7px;padding:7px 11px;font-size:11px;color:var(--muted);}
 </style>
 </head>
 <body>
-
-<div class="header">
-  <div class="header-logo">AFC<br>34</div>
-  <div>
-    <div class="header-title">AFC'34 JO10-2</div>
-  </div>
-  <button class="refresh-btn" onclick="laadData()">↻ Vernieuwen</button>
+<div class="hdr">
+  <div class="hdr-logo">AFC<br>34</div>
+  <div class="hdr-titel">AFC'34 JO10-2</div>
+  <button class="hdr-refresh" onclick="laadData()">↻ Vernieuwen</button>
 </div>
 
-<div class="content">
+<div class="pagina">
   <div id="overzicht"></div>
   <div id="detail" style="display:none"></div>
 </div>
 
 <script>
-const DATA_URL = 'data.json';
-let alleWedstrijden = [];
-let actieveWed = null;
+let alles = [];
+let actief = null;
 
-function fmtDatumLang(d) {
-  if (!d) return '';
-  const mnd = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
-  const [y,m,dag] = d.split('-');
-  return `${parseInt(dag)} ${mnd[parseInt(m)-1]} ${y}`;
+function esc(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function fmt(sec){return String(Math.floor(sec/60)).padStart(2,'0')+':'+String(sec%60).padStart(2,'0');}
+function datumLang(d){
+  if(!d)return'';
+  const mn=['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+  const[y,m,g]=d.split('-');return parseInt(g)+' '+mn[parseInt(m)-1]+' '+y;
 }
-function escH(s) { return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-function fmt(sec) { return `${String(Math.floor(sec/60)).padStart(2,'0')}:${String(sec%60).padStart(2,'0')}`; }
-
-function soortLabel(soort) {
-  if (soort === 'uit') return '<span class="wed-soort soort-uit">Uit</span>';
-  if (soort === 'toernooi') return '<span class="wed-soort soort-toernooi">Toernooi</span>';
-  return '<span class="wed-soort soort-thuis">Thuis</span>';
+function soortPill(s){
+  if(s==='uit')return'<span class="soort-pill sp-uit">🚌 Uit</span>';
+  if(s==='toernooi')return'<span class="soort-pill sp-toernooi">🏆 Toernooi</span>';
+  return'<span class="soort-pill sp-thuis">🏠 Thuis</span>';
 }
-
-function doelpuntenPerSpeler(w) {
-  if (!w.doelpunten) return [];
-  return Object.entries(w.doelpunten).filter(([,v]) => v > 0).sort(([,a],[,b]) => b - a);
+function scorers(w){
+  if(!w.doelpunten)return[];
+  return Object.entries(w.doelpunten).filter(([,v])=>v>0).sort(([,a],[,b])=>b-a);
 }
 
-function renderOverzicht() {
-  const el = document.getElementById('overzicht');
-  document.getElementById('detail').style.display = 'none';
-  el.style.display = '';
-
-  const gepubliceerd = alleWedstrijden
-    .filter(w => w.gepubliceerd)
-    .sort((a, b) => new Date(b.datum) - new Date(a.datum));
-
-  if (gepubliceerd.length === 0) {
-    el.innerHTML = `<div class="leeg"><div class="leeg-icon">⚽</div>Nog geen wedstrijden gepubliceerd.<br>Kom later terug!</div>`;
-    return;
-  }
-
-  el.innerHTML = gepubliceerd.map(w => {
-    const heeftScore = w.uitslag && (w.uitslag.thuis !== '' && w.uitslag.uit !== '');
-    const scorers = doelpuntenPerSpeler(w);
-    const tijd = w.tijdstip ? ` · ${w.tijdstip}` : '';
-
-    return `<div class="wed-kaart" onclick="toonDetail(${w.id})">
-      <div class="wed-kaart-header">
-        <div>
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px">
-            ${soortLabel(w.soort)}
-            ${heeftScore ? `<div class="wed-score-lbl" style="font-size:18px;margin-left:0">${w.uitslag.thuis}–${w.uitslag.uit}</div>` : ''}
-          </div>
-          <div class="wed-vs">AFC'34 JO10-2 vs ${escH(w.tegenstander)}</div>
-          <div class="wed-datum-lbl">${fmtDatumLang(w.datum)}${tijd}</div>
+function renderOverzicht(){
+  document.getElementById('detail').style.display='none';
+  const el=document.getElementById('overzicht');
+  el.style.display='';
+  const pub=alles.filter(w=>w.gepubliceerd).sort((a,b)=>new Date(b.datum)-new Date(a.datum));
+  if(!pub.length){el.innerHTML='<div class="leeg"><span class="leeg-icon">⚽</span>Nog geen wedstrijden gepubliceerd.<br>Kom later terug!</div>';return;}
+  el.innerHTML=pub.map(w=>{
+    const heeftScore=w.uitslag&&(w.uitslag.thuis||w.uitslag.uit);
+    const sc=scorers(w);
+    const tijd=w.tijdstip?' · '+w.tijdstip:'';
+    const wid=String(w.id);
+    return`<div class="wed-kaart" onclick="toonDetail('${wid}')">
+      <div class="wed-kaart-hdr">
+        <div class="wed-kaart-links">
+          <div class="wed-badge-rij">${soortPill(w.soort||'thuis')}${heeftScore?'<span style="font-family:\'Barlow Condensed\',sans-serif;font-size:15px;font-weight:800;color:var(--geel)">'+w.uitslag.thuis+'–'+w.uitslag.uit+'</span>':''}</div>
+          <div class="wed-kaart-vs">AFC'34 JO10-2 vs ${esc(w.tegenstander)}</div>
+          <div class="wed-kaart-meta">${datumLang(w.datum)}${tijd}</div>
         </div>
-        <div style="margin-left:auto;color:rgba(255,255,255,0.4);font-size:20px">›</div>
+        <div style="color:rgba(255,255,255,0.35);font-size:22px;align-self:center">›</div>
       </div>
       <div class="wed-kaart-body">
-        <div class="wed-info-rij">
-          <span class="info-pill">👥 <strong>${w.aanwezig ? w.aanwezig.length : '?'}</strong> spelers</span>
-          ${w.opstelling ? '<span class="info-pill">📋 Opstelling beschikbaar</span>' : ''}
+        <div class="pills">
+          <span class="pill">👥 <strong>${w.aanwezig?w.aanwezig.length:'?'}</strong> spelers</span>
+          ${w.opstelling?'<span class="pill">📋 Opstelling beschikbaar</span>':''}
         </div>
-        ${scorers.length > 0 ? `<div class="goals-preview">
-          ${scorers.map(([s,v]) => `<span class="goal-tag">${'⚽'.repeat(v)} ${escH(s)}</span>`).join('')}
-        </div>` : ''}
+        ${sc.length?'<div class="scorer-rij">'+sc.map(([s,v])=>'<span class="scorer-chip">'+'⚽'.repeat(v)+' '+esc(s)+'</span>').join('')+'</div>':''}
         <div class="detail-link">Bekijk details ›</div>
       </div>
     </div>`;
   }).join('');
 }
 
-function toonDetail(id) {
-  actieveWed = alleWedstrijden.find(w => w.id === id);
-  if (!actieveWed) return;
-  document.getElementById('overzicht').style.display = 'none';
-  const el = document.getElementById('detail');
-  el.style.display = '';
-  el.innerHTML = renderDetail(actieveWed);
+function toonDetail(wid){
+  actief=alles.find(w=>String(w.id)===String(wid));
+  if(!actief)return;
+  document.getElementById('overzicht').style.display='none';
+  const el=document.getElementById('detail');
+  el.style.display='';
+  el.innerHTML=renderDetail(actief);
+  el.scrollIntoView({behavior:'smooth'});
 }
 
-function renderDetail(w) {
-  const heeftOpr = !!(w.opstelling && w.opstelling.periodes);
-  const scorers = doelpuntenPerSpeler(w);
-  const heeftScore = w.uitslag && (w.uitslag.thuis !== '' && w.uitslag.uit !== '');
-  const tijd = w.tijdstip ? ` · ${w.tijdstip}` : '';
+function renderDetail(w){
+  const sc=scorers(w);
+  const heeftScore=w.uitslag&&(w.uitslag.thuis||w.uitslag.uit);
+  const tijd=w.tijdstip?' · '+w.tijdstip:'';
+  const heeftOpr=!!(w.opstelling&&w.opstelling.periodes);
 
-  let html = `<button class="terug-btn" onclick="renderOverzicht()">← Terug</button>
-    <div class="detail-header">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-        ${soortLabel(w.soort)}
-      </div>
-      <div class="detail-vs">AFC'34 JO10-2 vs ${escH(w.tegenstander)}</div>
-      <div class="detail-meta">
-        <span class="detail-datum">${fmtDatumLang(w.datum)}${tijd}</span>
-      </div>
-      ${heeftScore ? `<div class="scorebord">
-        <div class="score-team">
-          <div class="score-teamnaam">AFC'34 JO10-2</div>
-          <div class="score-getal">${w.uitslag.thuis}</div>
-        </div>
-        <div class="score-sep"></div>
-        <div class="score-team">
-          <div class="score-teamnaam">${escH(w.tegenstander)}</div>
-          <div class="score-getal">${w.uitslag.uit}</div>
-        </div>
-      </div>` : ''}
-    </div>`;
+  let h=`<button class="terug" onclick="renderOverzicht()">← Terug</button>
+  <div class="det-hdr">
+    <div class="det-badge-rij">${soortPill(w.soort||'thuis')}</div>
+    <div class="det-vs">AFC'34 JO10-2 vs ${esc(w.tegenstander)}</div>
+    <div class="det-meta">${datumLang(w.datum)}${tijd}</div>
+    ${heeftScore?`<div class="scorebord">
+      <div class="sb-team"><div class="sb-naam">AFC'34 JO10-2</div><div class="sb-getal">${w.uitslag.thuis}</div></div>
+      <div class="sb-sep"></div>
+      <div class="sb-team"><div class="sb-naam">${esc(w.tegenstander)}</div><div class="sb-getal">${w.uitslag.uit}</div></div>
+    </div>`:''}
+  </div>`;
 
-  if (scorers.length > 0) {
-    html += `<div class="detail-card">
-      <div class="detail-card-title">⚽ Doelpunten AFC'34</div>
-      <div class="scorers-lijst">
-        ${scorers.map(([s,v]) => `<span class="scorer-tag">
-          <span class="scorer-ballen">${'⚽'.repeat(v)}</span> ${escH(s)}
-        </span>`).join('')}
-      </div>
-    </div>`;
+  if(sc.length){
+    h+=`<div class="det-card"><div class="det-card-titel">⚽ Doelpunten AFC'34</div>
+    <div class="scorers">${sc.map(([s,v])=>`<span class="scorer-tag"><span>${'⚽'.repeat(v)}</span>${esc(s)}</span>`).join('')}</div></div>`;
   }
 
-  if (heeftOpr) {
-    const periodes = w.opstelling.periodes;
-    const nBank = Math.max(...periodes.map(p => p.bank.length), 0);
-    const rijen = ['KEEPER', ...Array.from({length:5},(_,i)=>`SPELER ${i+1}`), 'SEP',
-                   ...Array.from({length:nBank},(_,i)=>`BANK ${i+1}`)];
+  if(heeftOpr){
+    const per=w.opstelling.periodes;
+    const nB=Math.max(...per.map(p=>p.bank.length),0);
+    const rijen=['KEEPER',...Array.from({length:5},(_,i)=>'SPELER '+(i+1)),'SEP',...Array.from({length:nB},(_,i)=>'BANK '+(i+1))];
 
-    function helft(offset, lbl) {
-      const cols = periodes.slice(offset, offset+4);
-      let t = `<div class="helft-label">${lbl}</div><div class="opr-wrap"><table class="opr-tabel">
-        <tr><th class="rij-hdr">Rol</th>`;
-      for (let i=0;i<4;i++){const s=(offset+i)*375;t+=`<th>P${offset+i+1}<br><small>${fmt(s)}–${fmt(s+375)}</small></th>`;}
+    function tabel(offset,lbl){
+      const cols=per.slice(offset,offset+4);
+      let t=`<div class="h-lbl">${lbl}</div><div class="opr-scroll"><table class="opr-tbl"><tr><th class="rh">Rol</th>`;
+      for(let i=0;i<4;i++){const s=(offset+i)*375;t+=`<th>P${offset+i+1}<br><small style="font-weight:400">${fmt(s)}–${fmt(s+375)}</small></th>`;}
       t+='</tr>';
-      rijen.forEach((rij,ri)=>{
-        if(rij==='SEP'){t+=`<tr><td class="rij-lbl cel-sep" colspan="5"></td></tr>`;return;}
-        t+=`<tr><td class="rij-lbl">${rij}</td>`;
+      rijen.forEach((r,ri)=>{
+        if(r==='SEP'){t+='<tr><td class="rl cs" colspan="5"></td></tr>';return;}
+        t+=`<tr><td class="rl">${r}</td>`;
         cols.forEach(p=>{
           let n='',c='';
-          if(ri===0){n=p.keeper;c='cel-keeper';}
-          else if(ri<=5){n=p.veld[ri-1]||'';c='cel-veld';}
-          else{n=p.bank[ri-7]||'';c='cel-bank';}
+          if(ri===0){n=p.keeper;c='ck';}
+          else if(ri<=5){n=p.veld[ri-1]||'';c='cv';}
+          else{n=p.bank[ri-7]||'';c='cb';}
           t+=`<td class="${c}">${n?n.toUpperCase():''}</td>`;
         });
         t+='</tr>';
       });
-      t+='</table></div>';
-      return t;
+      return t+'</table></div>';
     }
 
-    const bankTel={};
-    (w.opstelling.aanwezig||[]).forEach(s=>bankTel[s]=0);
-    periodes.forEach(p=>p.bank.forEach(s=>{if(bankTel[s]!==undefined)bankTel[s]++;}));
-    const bankStr=Object.entries(bankTel).filter(([,v])=>v>0).map(([s,v]) => `<strong>${s}</strong>: ${v}×`).join(' · ');
+    const bt={};(w.opstelling.aanwezig||[]).forEach(s=>bt[s]=0);
+    per.forEach(p=>p.bank.forEach(s=>{if(bt[s]!==undefined)bt[s]++;}));
+    const bs=Object.entries(bt).filter(([,v])=>v>0).map(([s,v])=>`<strong>${s}</strong> ${v}×`).join(' · ');
 
-    html += `<div class="detail-card">
-      <div class="detail-card-title">📋 Opstelling</div>
-      <div class="tabellen-grid">
-        <div>${helft(0,'HELFT 1  00:00–25:00')}</div>
-        <div>${helft(4,'HELFT 2  25:00–50:00')}</div>
-      </div>
-      <div class="bank-summary">🪑 Bankbeurten: ${bankStr}</div>
-    </div>`;
+    h+=`<div class="det-card"><div class="det-card-titel">📋 Opstelling</div>
+    <div class="opr-grid"><div>${tabel(0,'HELFT 1 · 00:00–25:00')}</div><div>${tabel(4,'HELFT 2 · 25:00–50:00')}</div></div>
+    <div class="bank-bar">🪑 ${bs}</div></div>`;
   }
-
-  return html;
+  return h;
 }
 
-async function laadData() {
-  document.getElementById('overzicht').innerHTML = '<div class="loader">Laden...</div>';
-  try {
-    const res = await fetch(DATA_URL + '?t=' + Date.now());
-    alleWedstrijden = await res.json();
-    if (actieveWed) {
-      // Herlaad actieve wedstrijd
-      const vers = alleWedstrijden.find(w => w.id === actieveWed.id);
-      if (vers) { actieveWed = vers; document.getElementById('detail').innerHTML = renderDetail(vers); return; }
+async function laadData(){
+  document.getElementById('overzicht').innerHTML='<div class="leeg"><span class="leeg-icon">⏳</span>Laden...</div>';
+  try{
+    const r=await fetch('data.json?t='+Date.now());
+    alles=await r.json();
+    if(actief){
+      const vers=alles.find(w=>String(w.id)===String(actief.id));
+      if(vers){actief=vers;document.getElementById('detail').innerHTML=renderDetail(vers);return;}
     }
     renderOverzicht();
-  } catch(e) {
-    document.getElementById('overzicht').innerHTML = `<div class="leeg"><div class="leeg-icon">⚠️</div>Kon gegevens niet laden.</div>`;
-  }
+  }catch(e){document.getElementById('overzicht').innerHTML='<div class="leeg"><span class="leeg-icon">⚠️</span>Kon gegevens niet laden.</div>';}
 }
 
 laadData();
-setInterval(laadData, 30000);
+setInterval(laadData,30000);
 </script>
 </body>
 </html>
