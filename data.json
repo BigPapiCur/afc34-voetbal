@@ -166,5 +166,28 @@
       "Julian": 0
     },
     "gepubliceerd": true
+  },
+  {
+    "id": 1780740128845,
+    "datum": "2026-06-07",
+    "tegenstander": "Always Forward JO10-1",
+    "aanwezig": [
+      "Nick",
+      "Noah",
+      "Kick",
+      "Nyjah",
+      "Axel",
+      "Benjamin",
+      "Julian",
+      "Lorenzo",
+      "Daley"
+    ],
+    "opstelling": null,
+    "uitslag": {
+      "thuis": 0,
+      "uit": 0
+    },
+    "doelpunten": {},
+    "gepubliceerd": false
   }
 ]
