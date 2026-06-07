@@ -488,14 +488,14 @@
       ]
     },
     "uitslag": {
-      "thuis": 2,
+      "thuis": 3,
       "uit": 4
     },
     "doelpunten": {
       "Noah": 1,
       "Kick": 1,
       "Nyjah": 0,
-      "Axel": 0,
+      "Axel": 1,
       "Benjamin": 0,
       "Julian": 0,
       "Lorenzo": 0,
