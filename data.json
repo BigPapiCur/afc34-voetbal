@@ -152,7 +152,7 @@
       ]
     },
     "uitslag": {
-      "thuis": 0,
+      "thuis": 1,
       "uit": 4
     },
     "doelpunten": {
@@ -160,7 +160,7 @@
       "Kick": 0,
       "Nyjah": 0,
       "Axel": 0,
-      "Benjamin": 0,
+      "Benjamin": 1,
       "Julian": 0,
       "Lorenzo": 0,
       "Daley": 0
